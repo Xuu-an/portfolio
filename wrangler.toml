@@ -1,3 +1,5 @@
+name = "ameng" 
+
 kv_namespaces = [
-  { id = "MY_KV", binding="MY_KV" }
+  { id = "ameng_kv", binding="4357cd75ab9349e3bc53264c121798df" }
 ]
