@@ -2,6 +2,7 @@
   .model {
     position: relative;
     opacity: 0;
+    cursor: pointer;
 
     &[data-loaded='true']:global {
       animation: fade-in 1s ease forwards var(--delay);

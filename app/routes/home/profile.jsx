@@ -1,5 +1,5 @@
 import profileImgLarge from '~/assets/profile-large.jpg';
-import profileImgPlaceholder from '~/assets/profile-placeholder.jpg';
+import profileImgPlaceholder from '~/assets/placeholder.jpg';
 import profileImg from '~/assets/profile.jpg';
 import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
@@ -18,19 +18,15 @@ import styles from './profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hi there" start={visible} delay={500} />
+      <DecoderText text="你好啊" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      我是Ameng，一个设计师，目前在广东佛山工作（具体地址待补充）。我的工作内容包括平面设计、AIGC、产品设计和活动策划。熟悉多种设计工具和软件，能够高效将创意转化为实际作品。如果你对我常用的工具和软件感兴趣，可以查看我的{' '}
+      <Link href="/uses">工具页面</Link>。
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      业余时间我喜欢摄影、运动和探索新的设计趋势。如果你有有趣的项目或者想法，欢迎随时{' '}
+      <Link href="/contact">联系我</Link> 交流。
     </Text>
   </Fragment>
 );

@@ -2,19 +2,19 @@ import config from '~/config.json';
 
 export const navLinks = [
   {
-    label: 'Projects',
+    label: '我的项目',
     pathname: '/#project-1',
   },
   {
-    label: 'Details',
+    label: '关于AMeng',
     pathname: '/#details',
   },
   {
-    label: 'Articles',
+    label: '作品集',
     pathname: '/articles',
   },
   {
-    label: 'Contact',
+    label: '联系我',
     pathname: '/contact',
   },
 ];

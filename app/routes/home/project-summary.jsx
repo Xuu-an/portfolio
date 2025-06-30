@@ -125,6 +125,7 @@ export function ProjectSummary({
                         },
                       },
                     ]}
+                    href={buttonLink}
                   />
                 </Suspense>
               )}

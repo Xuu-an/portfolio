@@ -49,9 +49,9 @@
   }
 
   .navList {
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     position: relative;
     writing-mode: vertical-lr;
   }
@@ -67,7 +67,7 @@
     line-height: 1;
     display: inline-flex;
     align-items: center;
-
+direction: ltr;
     &:hover,
     &:active,
     &[aria-current='page'] {

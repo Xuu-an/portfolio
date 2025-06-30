@@ -46,6 +46,7 @@ import imageSprStoryboarderLight from '~/assets/spr-storyboarder-light.png';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import { Link } from '~/components/link';
+import {ListExpandOnHover} from '~/components/list-expand-on-hover';
 import { SegmentedControl, SegmentedControlOption } from '~/components/segmented-control';
 import { ThemeProvider, useTheme } from '~/components/theme-provider';
 import {
@@ -70,14 +71,14 @@ const EarthSection = lazy(() =>
   import('./earth').then(module => ({ default: module.EarthSection }))
 );
 
-const title = 'Designing the future of education';
+const title = '阿梦的设计作品展示';
 const description =
   'I worked as the design lead on a major iteration of Smart Sparrow’s product. We took the platform in a bold new direction, focusing on becoming the best tool for learning designers.';
 const roles = [
-  'Art Direction',
-  'UX and UI Design',
-  'Front End Development',
-  'Motion Design',
+  // 'Art Direction',
+  // 'UX and UI Design',
+  // 'Front End Development',
+  // 'Motion Design',
 ];
 
 export const meta = () => {
@@ -108,6 +109,7 @@ export const SmartSparrow = () => {
           url="https://www.smartsparrow.com/"
           roles={roles}
         />
+        <ListExpandOnHover />
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage

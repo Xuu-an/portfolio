@@ -63,6 +63,7 @@ export const Model = ({
   className,
   onLoad,
   alt,
+  href,
   ...rest
 }) => {
   const [loaded, setLoaded] = useState(false);
@@ -87,7 +88,12 @@ export const Model = ({
   const reduceMotion = useReducedMotion();
   const rotationX = useSpring(0, rotationSpringConfig);
   const rotationY = useSpring(0, rotationSpringConfig);
-
+  const handleClick = () => {
+      if (href) {
+        // window.open(href, '_blank'); // 新窗口打开
+        window.location.href = href; // 当前窗口跳转
+      }
+    };
   useEffect(() => {
     const { clientWidth, clientHeight } = container.current;
 
@@ -332,6 +338,7 @@ export const Model = ({
       ref={container}
       role="img"
       aria-label={alt}
+      onClick={href ? handleClick : undefined} 
       {...rest}
     >
       <canvas className={styles.canvas} ref={canvas} />

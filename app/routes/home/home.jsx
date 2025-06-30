@@ -10,6 +10,8 @@ import sliceTexture from '~/assets/slice-app.jpg';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+import jpg0 from '~/assets/gaozhan/0.jpg';
+import jpg1 from '~/assets/gaozhan/研讨会背景话-1.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -41,7 +43,7 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Designer + Developer',
+    title: '视觉设计师 + AIGC',
     description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
   });
 };
@@ -53,10 +55,11 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree,projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -103,17 +106,17 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
-        buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        title="高瞻VI设计项目"
+        description="高瞻VI项目是我在2017年参与的一个一个综合性的视觉设计项目，旨在为高瞻品牌创建统一的视觉识别系统。该项目涵盖了从标志设计到办公环境、广告宣传等多个方面的设计工作。通过精心设计的视觉元素，高瞻VI项目旨在提升品牌形象，增强用户体验，并传达高瞻品牌的核心价值观。"
+        buttonText="查看项目"
+        buttonLink="/projects/gaozhan"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
-              placeholder: sprTexturePlaceholder,
+              srcSet: `${jpg1} 900w, ${jpg1} 1500w`,
+              placeholder: jpg1,
             },
           ],
         }}
@@ -155,6 +158,26 @@ export const Home = () => {
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={3}
+        title= "Mod for Skyrim"
+        description="A mod for Skyrim that adds a new faction, quests, and characters"
+        buttonText="View project"
+        buttonLink="/projects/volkihar-knight"
+        model={{
+          type: 'laptop',
+          alt: 'Volkihar Knight mod for Skyrim',
           textures: [
             {
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
